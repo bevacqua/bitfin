@@ -47,8 +47,8 @@ Environment Variable  | Description                            | Default Value
 `BITSTAMP_ACCOUNT_ID` | Your Bitstamp account ID               | `undefined`
 `BITSTAMP_API_KEY`    | Your Bitstamp API key                  | `undefined`
 `BITSTAMP_API_SECRET` | Your Bitstamp API secret               | `undefined`
-`FROM`                | Currency you want to purchase          | `'USD'`
-`TO`                  | Currency you want to spend             | `'BTC'`
+`FROM`                | Currency you want to spend             | `'USD'`
+`TO`                  | Currency you want to purchase          | `'BTC'`
 `MIN`                 | Minimum acceptable market asking price | `2000`
 `MAX`                 | Maximum acceptable market asking price | `8000`
 
