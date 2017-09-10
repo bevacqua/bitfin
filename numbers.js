@@ -4,8 +4,8 @@ function flip(text) {
   return text.split('').reverse().join('')
 }
 
-function toMoney(value, { decimals = 2, currency = '$' } = {}) {
-  const fixed = value.toFixed(decimals)
+function toMoney(value, { precision = 2, currency = '$' } = {}) {
+  const fixed = value.toFixed(precision)
   const [ integer, decimal ] = fixed.split('.')
 
   if (integer.startsWith('-')) {
@@ -14,7 +14,7 @@ function toMoney(value, { decimals = 2, currency = '$' } = {}) {
   return moneyFormat(integer)
 
   function moneyFormat(integerPart) {
-    return `${ currency }${ prettyInt(integerPart) }.${ decimal }`
+    return `${ prettyInt(integerPart) }.${ decimal } ${ currency }`
   }
 }
 

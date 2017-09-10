@@ -20,29 +20,37 @@ The following command will attempt to place a single market order to purchase US
 node buy 100
 ```
 
-You can choose the currency you want to purchase by changing the `CURRENCY` environment variable. The following command will attempt to buy USD $ 100 worth of LTC.
+You can choose the currency you want to purchase by changing the `TO` environment variable. The following command will attempt to buy USD $ 100 worth of LTC.
 
 ```
-CURRENCY=LTC node buy 50
+TO=LTC node buy 50
+```
+
+You can choose the currency you want to spend using `FROM`. The following command will attempt to buy 0.5 BTC worth of ETH.
+
+```
+FROM=BTC TO=ETH node buy 0.5
 ```
 
 You can define limits on how much you'd like to spend. The following command attempts to buy USD $ 500 worth of ETH, provided the market price for 1 ETH is somewhere between USD $ 200 and USD $ 800.
 
 ```
-CURRENCY=ETH CURRENCY_MIN=200 CURRENCY_MAX=800 node buy 500
+TO=ETH MIN=200 MAX=800 node buy 500
 ```
 
-The `CURRENCY`, `CURRENCY_MIN`, and `CURRENCY_MAX` variables can be placed in `.env.json` or in `.env.defaults.json`.
+The `TO`, `FROM`, `MIN`, and `MAX` variables can be placed in `.env.json` or in `.env.defaults.json`.
 
-# currencies supported
+# variables
 
-Not hardcoded in this package, depends on what Bitstamp supports, subject to changes by Bitstamp.
-
-- BTC
-- EUR
-- XRP
-- LTC
-- ETH
+Environment Variable  | Description                            | Default Value
+----------------------|----------------------------------------|--------------------
+`BITSTAMP_ACCOUNT_ID` | Your Bitstamp account ID               | `undefined`
+`BITSTAMP_API_KEY`    | Your Bitstamp API key                  | `undefined`
+`BITSTAMP_API_SECRET` | Your Bitstamp API secret               | `undefined`
+`FROM`                | Currency you want to purchase          | `'USD'`
+`TO`                  | Currency you want to spend             | `'BTC'`
+`MIN`                 | Minimum acceptable market asking price | `2000`
+`MAX`                 | Maximum acceptable market asking price | `8000`
 
 # license
 
