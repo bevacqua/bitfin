@@ -28,30 +28,4 @@ function prettyInt(value) {
   return `${ sign }${ bits }`
 }
 
-function prettyLargeInt(input, { decimals = 2 } = {}) {
-  let value = input
-  let unit = ''
-
-  if (Math.abs(value) > 800) {
-    value /= 1000
-    unit = 'K'
-
-    if (Math.abs(value) > 800) {
-      value /= 1000
-      unit = 'M'
-
-      if (Math.abs(value) > 800) {
-        value /= 1000
-        unit = 'B'
-      }
-    }
-  }
-
-  const fixed = value.toFixed(decimals)
-  const [ integer, decimal ] = fixed.split('.')
-  const fractional = `.${ decimal }`.replace(/\.0+$/, '')
-
-  return `${ prettyInt(integer) }${ fractional }${ unit }`
-}
-
-module.exports = { toMoney, prettyInt, prettyLargeInt }
+module.exports = { toMoney, prettyInt }
