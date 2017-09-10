@@ -38,11 +38,11 @@ The `CURRENCY`, `CURRENCY_MIN`, and `CURRENCY_MAX` variables can be placed in `.
 
 Not hardcoded in this package, depends on what Bitstamp supports, subject to changes by Bitstamp.
 
--BTC
--EUR
--XRP
--LTC
--ETH
+- BTC
+- EUR
+- XRP
+- LTC
+- ETH
 
 # license
 
