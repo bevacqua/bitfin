@@ -1,6 +1,6 @@
 {
   "name": "bitfin",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Finance utility for Bitstamp",
   "author": "Nicolás Bevacqua <nico@ponyfoo.com> (https://ponyfoo.com/)",
   "license": "MIT",
