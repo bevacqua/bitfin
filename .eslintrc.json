@@ -1,0 +1,33 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "rules": {
+    "strict": 0,
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "space-before-function-paren": ["error", {
+      "named": "never",
+      "anonymous": "always",
+      "asyncArrow": "always"
+    }],
+    "array-callback-return": "error",
+    "curly": "error",
+    "eqeqeq": "error",
+    "handle-callback-err": "error",
+    "global-require": "error",
+    "no-console": 0,
+    "no-constant-condition": 0,
+    "no-else-return": "error",
+    "no-prototype-builtins": "error",
+    "no-unsafe-negation": "error",
+    "no-shadow": ["error", { "allow": ["next", "done", "err"] }],
+    "no-shadow-restricted-names": "error"
+  }
+}
